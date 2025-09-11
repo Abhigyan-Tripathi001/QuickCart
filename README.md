@@ -14,7 +14,8 @@ Sellers can manage products and view orders via a dedicated **Seller Dashboard**
 
 ## 📸 Screenshots  
 > <img width="1919" height="908" alt="image" src="https://github.com/user-attachments/assets/41874bb4-c84a-47ad-8d0d-f9305223f739" />
-> <img width="1919" height="903" alt="image" src="https://github.com/user-attachments/assets/73b38a51-064e-4b9b-8167-e3780302c467" />
+> <img width="1919" height="902" alt="image" src="https://github.com/user-attachments/assets/f29a3e84-d1d5-40e5-b615-7d9c9a355957" />
+
 
 
 ---
