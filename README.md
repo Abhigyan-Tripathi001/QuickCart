@@ -8,13 +8,14 @@ Sellers can manage products and view orders via a dedicated **Seller Dashboard**
 
 ### ➥ 🌐 Live Website Links  
 
-🔗 **Live App (User + Seller Panel)** →  
-👤 [quickcart.vercel.app](https://quickcart.vercel.app)  
+🔗 **Live App (User + Seller Panel)** →  👤 [quickcart.vercel.app](https://quick-cart-plum-pi.vercel.app/)  
 
 ---
 
 ## 📸 Screenshots  
-> *(Add screenshots here just like your previous project)*  
+> <img width="1919" height="908" alt="image" src="https://github.com/user-attachments/assets/41874bb4-c84a-47ad-8d0d-f9305223f739" />
+> <img width="1919" height="903" alt="image" src="https://github.com/user-attachments/assets/73b38a51-064e-4b9b-8167-e3780302c467" />
+
 
 ---
 
