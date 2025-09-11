@@ -46,7 +46,7 @@ Sellers can manage products and view orders via a dedicated **Seller Dashboard**
 - ➕ Add new products with images (Cloudinary)  
 - 📃 View & manage all listed products  
 - 📦 View incoming customer orders  
-- 🏷️ **Role-based seller access** via Clerk `user/metadata/public/role=seller`  
+- 🏷️ **Role-based seller access** via Clerk `user/metadata/public/role:"seller"`  
 
 ---
 
