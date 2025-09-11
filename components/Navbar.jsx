@@ -17,7 +17,8 @@ const Navbar = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      router.push(`/all-products?search=${encodeURIComponent(searchQuery)}`);
+      // ✅ use "q" instead of "search"
+      router.push(`/all-products?q=${encodeURIComponent(searchQuery)}`);
       setSearchOpen(false);
       setSearchQuery("");
     }
@@ -35,18 +36,10 @@ const Navbar = () => {
 
       {/* Links */}
       <div className="flex items-center gap-4 lg:gap-8 max-md:hidden">
-        <Link href="/" className="hover:text-gray-900 transition">
-          Home
-        </Link>
-        <Link href="/all-products" className="hover:text-gray-900 transition">
-          Shop
-        </Link>
-        <Link href="/about" className="hover:text-gray-900 transition">
-          About Us
-        </Link>
-        <Link href="/contact" className="hover:text-gray-900 transition">
-          Contact
-        </Link>
+        <Link href="/" className="hover:text-gray-900 transition">Home</Link>
+        <Link href="/all-products" className="hover:text-gray-900 transition">Shop</Link>
+        <Link href="/about" className="hover:text-gray-900 transition">About Us</Link>
+        <Link href="/contact" className="hover:text-gray-900 transition">Contact</Link>
 
         {isSeller && (
           <button
@@ -112,60 +105,9 @@ const Navbar = () => {
           </button>
         )}
       </ul>
-
-      {/* Mobile */}
-      <div className="flex items-center md:hidden gap-3">
-        {isSeller && (
-          <button
-            onClick={() => router.push("/seller")}
-            className="text-xs border px-4 py-1.5 rounded-full"
-          >
-            Seller Dashboard
-          </button>
-        )}
-        {user ? (
-          <UserButton>
-            <UserButton.MenuItems>
-              <UserButton.Action
-                label="Home"
-                labelIcon={<HomeIcon />}
-                onClick={() => router.push("/")}
-              />
-            </UserButton.MenuItems>
-            <UserButton.MenuItems>
-              <UserButton.Action
-                label="Products"
-                labelIcon={<BoxIcon />}
-                onClick={() => router.push("/all-products")}
-              />
-            </UserButton.MenuItems>
-            <UserButton.MenuItems>
-              <UserButton.Action
-                label="Cart"
-                labelIcon={<CartIcon />}
-                onClick={() => router.push("/cart")}
-              />
-            </UserButton.MenuItems>
-            <UserButton.MenuItems>
-              <UserButton.Action
-                label="My Orders"
-                labelIcon={<BagIcon />}
-                onClick={() => router.push("/my-orders")}
-              />
-            </UserButton.MenuItems>
-          </UserButton>
-        ) : (
-          <button
-            onClick={openSignIn}
-            className="flex items-center gap-2 hover:text-gray-900 transition"
-          >
-            <Image src={assets.user_icon} alt="user icon" />
-            Account
-          </button>
-        )}
-      </div>
     </nav>
   );
 };
 
 export default Navbar;
+
