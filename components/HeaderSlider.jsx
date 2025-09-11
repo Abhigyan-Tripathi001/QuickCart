@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const HeaderSlider = () => {
+
+  const router = useRouter();
+
   const sliderData = [
     {
       id: 1,
@@ -11,6 +15,8 @@ const HeaderSlider = () => {
       buttonText1: "Buy now",
       buttonText2: "Find more",
       imgSrc: assets.header_headphone_image,
+      link1: "/product/68bec2a7d4c91431134ca4f1",
+      link2: "/all-products",
     },
     {
       id: 2,
@@ -19,6 +25,8 @@ const HeaderSlider = () => {
       buttonText1: "Shop Now",
       buttonText2: "Explore Deals",
       imgSrc: assets.header_playstation_image,
+      link1: "/product/68bec3ced4c91431134ca4f9",
+      link2: "/all-products",
     },
     {
       id: 3,
@@ -27,6 +35,8 @@ const HeaderSlider = () => {
       buttonText1: "Order Now",
       buttonText2: "Learn More",
       imgSrc: assets.header_macbook_image,
+      link1: "/product/68bec466d4c91431134ca4fd",
+      link2: "/all-products",
     },
   ];
 
@@ -62,10 +72,10 @@ const HeaderSlider = () => {
                 {slide.title}
               </h1>
               <div className="flex items-center mt-4 md:mt-6 ">
-                <button className="md:px-10 px-7 md:py-2.5 py-2 bg-orange-600 rounded-full text-white font-medium">
+                <button onClick={() => router.push(slide.link1)} className="md:px-10 px-7 md:py-2.5 py-2 bg-orange-600 rounded-full text-white font-medium">
                   {slide.buttonText1}
                 </button>
-                <button className="group flex items-center gap-2 px-6 py-2.5 font-medium">
+                <button onClick={() => router.push(slide.link2)} className="group flex items-center gap-2 px-6 py-2.5 font-medium">
                   {slide.buttonText2}
                   <Image className="group-hover:translate-x-1 transition" src={assets.arrow_icon} alt="arrow_icon" />
                 </button>

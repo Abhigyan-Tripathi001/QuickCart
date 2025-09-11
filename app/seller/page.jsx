@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useAppContext } from "@/context/AppContext";
 import axios from "axios";
 import toast from "react-hot-toast";
+import Footer from "@/components/seller/Footer";
 
 const AddProduct = () => {
 
@@ -167,11 +168,11 @@ const AddProduct = () => {
             />
           </div>
         </div>
-        <button type="submit" className="px-8 py-2.5 bg-orange-600 text-white font-medium rounded">
+        <button type="submit" className="px-8 py-2.5 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded">
           ADD
         </button>
       </form>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
